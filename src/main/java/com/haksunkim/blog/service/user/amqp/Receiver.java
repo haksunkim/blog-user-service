@@ -1,9 +1,6 @@
 package com.haksunkim.blog.service.user.amqp;
 
-import java.util.List;
 import java.util.Map;
-import java.util.concurrent.CountDownLatch;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,7 +35,7 @@ public class Receiver {
 			Iterable<User> users = userDao.findAll();
 			try {
 				response = mapper.writeValueAsString(users);
-				log.info("Response > " + users.toString());
+				log.info("Response > " + response);
 			} catch (JsonProcessingException e) {
 				log.error("JSON processing exception", e);
 				response = "{\"error\":\"" + e.getMessage() + "\"}";

@@ -1,8 +1,5 @@
 package com.haksunkim.blog.service.user;
 
-import java.util.Arrays;
-import java.util.List;
-
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.Queue;
